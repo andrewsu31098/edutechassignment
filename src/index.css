@@ -1,14 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,500;1,400&display=swap");
+
 body {
   margin: 0;
+  font-family: "Public Sans";
 }
 
-.top-pane {
-  background-color: hsl(225, 6%, 25%);
+/* My Code */
+/* **************************************** */
+.mainContainer {
+  width: 100%;
 }
+
+.activityContainer {
+  width: auto;
+  display: flex;
+  gap: 16px;
+  padding-inline: 8px;
+}
+
+/* Explainer */
+.ExplainerContainer {
+  background-color: rgb(73, 182, 203);
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  padding-inline: 16px;
+  padding-block: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 16px;
+}
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  gap: 24px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding-inline: 1em;
+  padding-block: 0.5em;
+  border: 2px #203d42 solid;
+  border-radius: 16px;
+  background-color: white;
+  color: #203d42;
+}
+.button:hover {
+  box-shadow: 0px 2px;
+  cursor: pointer;
+  background-color: rgb(203, 203, 203);
+}
+.teacherContainer {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  border: 2px #203d42 solid;
+  border-radius: 16px;
+  background-color: #101f22;
+  color: #e7eef0;
+}
+.teacherLogo {
+  width: 54px;
+  height: 54px;
+}
+.teacherName {
+  padding-top: 8px;
+  font-weight: bold;
+}
+.chatContainer {
+  padding: 16px;
+  border: 2px #203d42 solid;
+  background-color: rgb(73, 182, 203);
+  border-radius: 16px;
+  flex-grow: 1;
+  line-height: 2em;
+}
+
+/* Toolbar */
+.toolbar {
+  height: 64px;
+  padding-inline: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 200px;
+}
+.logoWrapper {
+  flex: 1 1 0%;
+  max-width: 45px;
+  height: auto;
+  width: 100%;
+}
+.nameWrapper {
+  flex: 3 1 0%;
+  width: 100%;
+  height: auto;
+}
+.clockWrapper {
+  flex: 1 1 0%;
+  width: 100;
+  height: auto;
+}
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}
+.linksContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.yellowWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbdd3f;
+  height: 41px;
+  border-radius: 16px;
+  width: 80px;
+  margin-left: -8px;
+}
+
+/* Output Panel */
+iframe {
+  resize: both;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  border: 3px gray solid;
+  position: relative;
+}
+.output {
+  position: relative;
+}
+.output::before {
+  content: "No Code Yet. \A Greatness begins somewhere!";
+  color: grey;
+  position: absolute;
+  white-space: pre;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Imported Code */
+/* **************************************** */
 
 .pane {
-  height: 50vh;
+  height: calc(90vh - 64px);
   display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .editor-container {
@@ -16,8 +170,9 @@ body {
   flex-basis: 0;
   display: flex;
   flex-direction: column;
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: hsl(225, 6%, 25%);
+  border-radius: 16px;
 }
 
 .editor-container.collapsed {
@@ -30,7 +185,7 @@ body {
 }
 
 .expand-collapse-btn {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   background: none;
   border: none;
   color: white;
@@ -42,9 +197,9 @@ body {
   justify-content: space-between;
   background-color: hsl(225, 6%, 13%);
   color: white;
-  padding: .5rem .5rem .5rem 1rem;
-  border-top-right-radius: .5rem;
-  border-top-left-radius: .5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
 }
 
 .CodeMirror {
@@ -53,7 +208,7 @@ body {
 
 .code-mirror-wrapper {
   flex-grow: 1;
-  border-bottom-right-radius: .5rem;
-  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
   overflow: hidden;
 }
