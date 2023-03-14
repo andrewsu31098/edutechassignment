@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+kaboomlesson.netlify.app
+![edutech example](https://user-images.githubusercontent.com/48111116/224872676-21c1f768-0108-4e2b-8e94-e2f181ca95ed.PNG)
+
 
 ## Available Scripts
 
